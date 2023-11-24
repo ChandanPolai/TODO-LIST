@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppiens", sans-serif;
+  text-transform: capitalize;
+}
+
+:root {
+  --main-color: #0c356a;
+  --main-container: #0174be;
+  --add-btn: #ffc436;
+  --main-text-color: #fff;
+  --tasks-back: #fff0ce;
+}
+
+body {
+  background: var(--main-color);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1em;
+  background: var(--main-container);
+  border-radius: 0.5em;
+  max-width: 100%;
+}
+
+.container h1 {
+  text-align: center;
+  color: var(--main-text-color);
+  margin: 0.5rem 0;
+}
+
+.add-div {
+  display: flex;
+}
+
+.add-div #text-box {
+  border: none;
+  outline: none;
+  font-size: 1.3em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+.add-btn {
+  background: var(--add-btn);
+  border: none;
+  padding: 0.5em 2rem;
+  border-radius: 0.5em;
+  margin: 0 0.5em;
+  cursor: pointer;
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.add-btn:hover {
+  color: var(--add-btn);
+  background: var(--main-color);
+}
+
+.tasks div {
+  background: var(--main-color);
+  color: var(--main-text-color);
+  margin: 1em 0;
+  border-radius: 0.3rem;
+  padding: 0.4em;
+  position: relative;
+}
+
+/* clear the tasks when i was check */
+.checkTasks {
+  text-decoration: line-through;
+  color: var(--main-container);
+  transition: all 0.2s ease;
+}
+
+.tasks div span {
+  float: right;
+  margin: 0 0.5em;
+  font-size: 24px;
+  top: -22px;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkicon:hover {
+  color: rgb(26, 196, 26);
+}
+
+.remove:hover {
+  color: red;
+}
+.edit:hover {
+  color: var(--add-btn);
+}
+
+@media only screen and (max-width: 300px) {
+  .add-div {
+    flex-wrap: wrap;
+  }
+
+  .add-btn {
+    width: 100%;
+    margin: 0.2em 0;
+    padding: 0.5rem;
+  }
+}
